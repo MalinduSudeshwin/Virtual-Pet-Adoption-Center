@@ -9,5 +9,5 @@
 # Virtual Pet Adoption Center - Frontend
 
 ##frontend Steps to Run 
- -- cd frontend
+ **cd frontend
   npm start
