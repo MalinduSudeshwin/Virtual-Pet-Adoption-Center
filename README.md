@@ -1,4 +1,9 @@
 # Virtual-Pet-Adoption-Center
 
-Backend Run - npm run dev
-frontend Run - npm start
+##Backend Steps to Run
+   cd backend
+   npm run dev
+
+##frontend Steps to Run 
+  cd frontend
+  npm start
