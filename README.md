@@ -12,7 +12,7 @@
  **cd frontend
   npm start
 
-## Features
+## frontend Steps to Run 
 - **View Pets**: Display a list of available pets.
 - **Add Pets**: Add new pets to the system.
 - **Update Pets**: Edit pet details.
