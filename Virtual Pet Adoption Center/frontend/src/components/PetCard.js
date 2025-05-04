@@ -1,3 +1,5 @@
+import { generateCertificate } from "../utils/generateCertificate"; // Import the certificate generation function
+
 const moodColors = {
   Happy: "bg-green-200",
   Excited: "bg-yellow-200",
@@ -5,14 +7,16 @@ const moodColors = {
 };
 
 export default function PetCard({ pet, onAdopt, onDelete, onEdit }) {
-  const downloadCertificate = (id) => {
-    window.open(`http://localhost:5000/pets/${id}/certificate`, '_blank');
+
+  // Function to handle downloading the certificate
+  const handleDownloadCertificate = () => {
+    generateCertificate(pet);  // Generate the certificate for the adopted pet
   };
 
   return (
     <div className={`p-6 rounded-xl shadow-lg border ${moodColors[pet.mood] || "bg-gray-100"}`}>
       <h2 className="text-2xl font-bold text-gray-800 mb-4">{pet.name}</h2>
-  
+
       <table className="min-w-full table-auto text-gray-700">
         <tbody>
           <tr>
@@ -37,7 +41,7 @@ export default function PetCard({ pet, onAdopt, onDelete, onEdit }) {
           </tr>
         </tbody>
       </table>
-  
+
       <div className="flex flex-wrap gap-2 mt-4">
         {!pet.adopted && (
           <button
@@ -65,7 +69,7 @@ export default function PetCard({ pet, onAdopt, onDelete, onEdit }) {
         </button>
         {pet.adopted && (
           <button
-            onClick={() => downloadCertificate(pet._id)}
+            onClick={handleDownloadCertificate} // Handle download certificate click
             className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
           >
             Download Certificate
@@ -74,6 +78,4 @@ export default function PetCard({ pet, onAdopt, onDelete, onEdit }) {
       </div>
     </div>
   );
-  
-  
 }
