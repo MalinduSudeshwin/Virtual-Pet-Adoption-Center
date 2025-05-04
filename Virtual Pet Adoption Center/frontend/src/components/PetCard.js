@@ -1,4 +1,4 @@
-import { generateCertificate } from "../utils/generateCertificate"; // Import the certificate generation function
+import { generateCertificate } from "../utils/generateCertificate"; 
 
 const moodColors = {
   Happy: "bg-green-200",
@@ -69,7 +69,7 @@ export default function PetCard({ pet, onAdopt, onDelete, onEdit }) {
         </button>
         {pet.adopted && (
           <button
-            onClick={handleDownloadCertificate} // Handle download certificate click
+            onClick={handleDownloadCertificate} 
             className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
           >
             Download Certificate

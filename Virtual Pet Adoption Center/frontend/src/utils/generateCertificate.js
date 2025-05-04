@@ -1,4 +1,3 @@
-// src/utils/generateCertificate.js
 import jsPDF from "jspdf";
 
 export function generateCertificate(pet) {
